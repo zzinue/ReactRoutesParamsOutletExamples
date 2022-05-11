@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import { Routes, Route, Link, useParams, Outlet } from "react-router-dom";
 
@@ -9,14 +9,12 @@ function App() {
       <Link to={`/`}>Home</Link>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<about />} />
         <Route path="/Koder/:name" element={<Koder />} />
         <Route index path="Modulos " element={<h1>Hola</h1>} />
-        <Route path="Retos " element={<h1>Retos</h1>}>
-
+        <Route path="Retos" element={<h1>Retos</h1>}>
         </Route>
       </Routes>
-
       <footer>
         <p>Footer</p>
       </footer>
@@ -58,13 +56,11 @@ const Home = () => {
 }
 
 
-const About = () => {
+const about = () => {
   <>
     <h1>About</h1>
   </>
 }
-
-
 
 export default App;
 
